@@ -1,10 +1,9 @@
 import React, { createContext } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Test from 'components/organisms/Test';
+import SamplePage from 'pages/SamplePage';
 import GlobalStyle from 'styles/globalStyles';
 import { lightTheme, Theme } from 'styles/theme';
 import { useDarkMode } from 'hooks/useDarkMode';
-
+import { ThemeProvider } from 'styled-components';
 interface ContextProps {
   theme: Theme;
   toggleTheme: () => void;
@@ -19,10 +18,10 @@ const App: React.FC = () => {
   const { theme, toggleTheme } = useDarkMode();
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <GlobalStyle theme={theme} />
-      <Routes>
-        <Route path="/" element={<Test />} />
-      </Routes>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle theme={theme} />
+        <SamplePage />
+      </ThemeProvider>
     </ThemeContext.Provider>
   );
 };
