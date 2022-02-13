@@ -5,14 +5,15 @@ import { ThemeContext } from 'App/index';
 const Button = styled.button`
   border: ${({ theme }) => theme.ftColor} 1px solid;
   outline: none;
-
-  background-color: ${({ theme }) => theme.ftColor};
+  cursor: pointer;
+  color: ${({ theme }) => theme.bgColor};
+  background: ${({ theme }) => theme.ftColor};
 `;
 
-const ThemeButton: React.FC = () => {
+const ToggleButton: React.FC = () => {
   const { toggleTheme } = useContext(ThemeContext);
 
   return <Button onClick={toggleTheme}>TOGGLE!</Button>;
 };
 
-export default ThemeButton;
+export default ToggleButton;

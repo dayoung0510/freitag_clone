@@ -1,5 +1,12 @@
 @font-face {
   font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff')
+    format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard';
   src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraLight.woff')
     format('woff');
   font-weight: 200;
@@ -23,6 +30,13 @@
 }
 @font-face {
   font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff')
+    format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard';
   src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff')
     format('woff');
   font-weight: 600;
@@ -41,4 +55,28 @@
     format('woff');
   font-weight: 900;
   font-style: normal;
+}
+@font-face {
+  font-family: 'Score';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-9Black.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'Score';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-2ExtraLight.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'Score';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-weight: 500;
 }

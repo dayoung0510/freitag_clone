@@ -1,6 +1,5 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { ThemeContext } from 'App/index';
 
 const Button = styled.button`
   border: ${({ theme }) => theme.ftColor} 1px solid;
@@ -13,13 +12,7 @@ const Button = styled.button`
 `;
 
 const ThemeButton: React.FC = ({ children }) => {
-  const { toggleTheme } = useContext(ThemeContext);
-
-  return (
-    <Button onClick={toggleTheme} type="button">
-      {children}
-    </Button>
-  );
+  return <Button type="button">{children}</Button>;
 };
 
 export default ThemeButton;

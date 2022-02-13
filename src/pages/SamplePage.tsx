@@ -1,11 +1,11 @@
 import React from 'react';
-import ThemeButton from 'components/atoms/ThemeButton';
 import Button from 'components/atoms/Button';
+import Nav from 'components/molcules/Nav';
 
 const SamplePage: React.FC = () => {
   return (
     <div>
-      <div>WELCOME</div>
+      <Nav />
       <div>
         <Button>sdfsdfsdf</Button>
       </div>
