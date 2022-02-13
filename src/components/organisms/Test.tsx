@@ -1,16 +1,14 @@
-import React from 'react';
-import { useDarkMode } from 'hooks/useDarkMode';
+import React, { useContext } from 'react';
+import { ThemeContext } from 'App/index';
 
 const Test: React.FC = () => {
-  const { theme, toggleTheme } = useDarkMode();
+  const { toggleTheme } = useContext(ThemeContext);
 
   return (
     <div>
-      <div>
-        <button type="button" onClick={toggleTheme}>
-          체인지
-        </button>
-      </div>
+      <button type="button" onClick={toggleTheme}>
+        토글테마
+      </button>
     </div>
   );
 };
