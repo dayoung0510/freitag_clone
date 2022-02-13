@@ -9,7 +9,7 @@ type Props = {
 };
 
 const Background = styled.div<Props>`
-  background: ${({ bgGray }) => (bgGray ? '#ccc' : 0)};
+  background: ${({ bgGray }) => (bgGray ? '#666' : 0)};
   padding: 0.5rem;
   svg {
     font-size: ${({ sz }) => (sz ? iconSize[sz] : '1rem')};
