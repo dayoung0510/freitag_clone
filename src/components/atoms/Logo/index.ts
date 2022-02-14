@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Logo = styled.div`
   width: 10rem;
-  height: 100%;
+  height: 2.6rem;
   background-color: ${({ theme }) => theme.ftColor};
   color: ${({ theme }) => theme.bgColor};
   font-size: 1.2rem;

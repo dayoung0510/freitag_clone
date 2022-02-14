@@ -14,3 +14,8 @@ export const Desc = styled.div`
   font-size: 1rem;
   margin-top: 0.5rem;
 `;
+
+export const TransTitle = styled(Title)`
+  background: none;
+  color: black;
+`;

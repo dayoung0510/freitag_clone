@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { iconSize, color } from 'styles/theme';
 
 type Props = {
@@ -9,7 +9,15 @@ type Props = {
 };
 
 const Background = styled.div<Props>`
-  background: ${({ bgGray }) => (bgGray ? '#666' : 0)};
+  ${({ bgGray }) =>
+    bgGray &&
+    css`
+      background-color: #666;
+      svg {
+        color: '#fff';
+      }
+    `}
+
   padding: 0.5rem;
   svg {
     font-size: ${({ sz }) => (sz ? iconSize[sz] : '1rem')};
