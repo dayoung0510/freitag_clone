@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Logo from 'components/atoms/Logo';
-import ToggleButton from 'components/atoms/ToggleButton';
+import ToggleButton from 'components/atoms/Buttons/ToggleButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import PersonIcon from '@mui/icons-material/Person';
 import FilterListIcon from '@mui/icons-material/FilterList';
@@ -36,7 +36,7 @@ const Nav: React.FC = () => {
           </Icon>
         </Flex>
       </div>
-      <ToggleButton>Toggle</ToggleButton>
+      <ToggleButton />
     </Container>
   );
 };

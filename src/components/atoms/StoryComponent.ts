@@ -18,4 +18,10 @@ export const Desc = styled.div`
 export const TransTitle = styled(Title)`
   background: none;
   color: black;
+  padding: 0;
+`;
+
+export const Container = styled.div`
+  margin-bottom: 1.5rem;
+  display: flex;
 `;

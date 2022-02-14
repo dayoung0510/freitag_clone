@@ -1,4 +1,4 @@
-import { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 import { TransTitle as Title } from '../StoryComponent';
 import Logo from '.';
 import { darkTheme } from 'styles/theme';
@@ -8,17 +8,23 @@ export default {
   component: Logo,
 };
 
+const SampleLogo = styled(Logo)`
+  height: 2.6rem;
+`;
+
 export const Sample = () => {
   return (
     <>
       <div>
         <Title>light theme</Title>
-        <Logo>LOGO TITLE</Logo>
+        <SampleLogo>FREITAG</SampleLogo>
       </div>
 
       <div>
         <Title>dark theme</Title>
-        <Logo>LOGO TITLE</Logo>
+        <ThemeProvider theme={darkTheme}>
+          <SampleLogo>FREITAG</SampleLogo>
+        </ThemeProvider>
       </div>
     </>
   );

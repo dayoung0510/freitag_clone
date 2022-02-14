@@ -13,7 +13,7 @@ const Button = styled.button`
 const ToggleButton: React.FC = () => {
   const { toggleTheme } = useContext(ThemeContext);
 
-  return <Button onClick={toggleTheme}>TOGGLE!</Button>;
+  return <Button onClick={toggleTheme}>CHANGE THEME</Button>;
 };
 
 export default ToggleButton;

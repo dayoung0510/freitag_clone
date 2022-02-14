@@ -4,6 +4,7 @@ import GlobalStyle from 'styles/globalStyles';
 import { lightTheme, Theme } from 'styles/theme';
 import { useDarkMode } from 'hooks/useDarkMode';
 import { ThemeProvider } from 'styled-components';
+
 interface ContextProps {
   theme: Theme;
   toggleTheme: () => void;
