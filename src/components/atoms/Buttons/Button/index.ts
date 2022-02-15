@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { ftSize } from 'styles/theme';
+import { lighten } from 'polished';
 
 type Props = {
   sz?: keyof typeof ftSize;
@@ -15,8 +16,14 @@ const Button = styled.button<Props>`
   font-family: 'Pretendard';
 
   color: ${({ theme }) => theme.bgColor};
-  background-color: ${({ cr, theme }) =>
-    cr ? theme.color[cr] : theme.ftColor};
+
+  ${({ theme, cr }) => css`
+    background-color: ${cr ? theme.color[cr] : theme.ftColor};
+
+    &:hover {
+      background: ${cr ? lighten(0.2, theme.color[cr]) : lighten(0.2, '#000')};
+    }
+  `}
 
   ${({ cr }) =>
     cr === 'white' &&
