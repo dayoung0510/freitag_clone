@@ -20,6 +20,7 @@ ${reset}
     font-size: 18px;
     width: 100%;
     height: 100%;
+    transition: all ease 0.7s 0s;
   }
 
   *, button, input, select, label {

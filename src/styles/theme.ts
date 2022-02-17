@@ -13,6 +13,7 @@ export const ftSize = {
   md: '1rem',
   lg: '1.2rem',
   xl: '1.5rem',
+  xxl: '3rem',
 };
 
 export const iconSize = {

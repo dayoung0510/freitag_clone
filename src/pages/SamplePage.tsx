@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Button from 'components/atoms/Buttons/Button';
+import FilterListIcon from '@mui/icons-material/FilterList';
+import { ftSize, ftFamily } from 'styles/theme';
 import Nav from 'components/molcules/Nav';
 import ProductGrid from 'components/atoms/ProductGrid';
 import PSomenail from 'components/atoms/ProductSomenail';
@@ -16,9 +18,23 @@ import P9 from 'assets/imgs/9.png';
 import P10 from 'assets/imgs/10.png';
 
 const Container = styled.div`
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   padding: 3rem 0;
+`;
+type Props = {
+  sz: string;
+  ff?: keyof typeof ftFamily;
+  fw?: number;
+  mb: number;
+};
+
+const Text = styled.div<Props>`
+  font-weight: 600;
+  font-size: ${({ sz }) => sz};
+  font-family: ${({ ff }) => ff};
+  font-weight: ${({ fw }) => fw};
+  margin-bottom: ${({ mb }) => `${mb}rem`};
 `;
 
 const SamplePage: React.FC = () => {
@@ -26,6 +42,28 @@ const SamplePage: React.FC = () => {
     <div>
       <Nav />
       <Container>
+        <Text sz={ftSize.sm} mb={1.2}>
+          HOME - BAGS - MESSENGER - F11 LASSIE
+        </Text>
+
+        <Text
+          sz={ftSize.md}
+          mb={2}
+          style={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}
+        >
+          <div style={{ marginRight: '0.5rem' }}>
+            <FilterListIcon />
+          </div>{' '}
+          <div>FILTERS (0)</div>
+        </Text>
+
+        <Text sz={ftSize.xxl} fw={700} mb={0.5}>
+          F11 LASSIE
+        </Text>
+
+        <Text sz={ftSize.xl} fw={600} mb={1}>
+          MESSENGER SMALL ₩288,000
+        </Text>
         <div>
           <ProductGrid>
             <PSomenail bg={P1} />
