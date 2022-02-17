@@ -2,6 +2,7 @@
   "name": "freitag_clone",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http:///dayoung0510.github.io/freitag_clone",
   "dependencies": {
     "@babel/eslint-parser": "^7.17.0",
     "@emotion/react": "^11.7.1",
@@ -16,6 +17,7 @@
     "@types/node": "^16.11.24",
     "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.11",
+    "chromatic": "^6.4.3",
     "polished": "^4.1.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -33,7 +35,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -86,6 +90,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "gh-pages": "^3.2.3",
     "postcss": "^8.4.6",
     "prettier-eslint": "^13.0.0",
     "tailwindcss": "^3.0.18",
