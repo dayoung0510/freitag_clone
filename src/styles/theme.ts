@@ -6,6 +6,7 @@ export const color = {
   lime: lime[700],
   black: '#010001',
   white: '#fdfdfd',
+  gray: '#dcdcdc',
 };
 
 export const ftSize = {

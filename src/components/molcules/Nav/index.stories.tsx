@@ -4,7 +4,7 @@ import { darkTheme } from 'styles/theme';
 import Nav from '.';
 
 export default {
-  title: 'molcules/Nav',
+  title: 'organisms/Nav',
   componenet: Nav,
 };
 

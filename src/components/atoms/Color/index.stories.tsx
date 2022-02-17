@@ -30,7 +30,10 @@ export const Sample = () => {
         <Box cr={color.black} style={{ border: '1px solid #000' }}>
           black
         </Box>
-        <Box cr={color.white} ft="#000" style={{ border: '1px solid #000' }}>
+        <Box cr={color.gray} ft="#000">
+          gray
+        </Box>
+        <Box cr={color.white} ft="#000" style={{ border: '1px solid #747474' }}>
           white
         </Box>
       </div>
