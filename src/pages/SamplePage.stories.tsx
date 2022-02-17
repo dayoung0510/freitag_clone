@@ -6,5 +6,9 @@ export default {
 };
 
 export const Sample = () => {
-  return <SamplePage />;
+  return (
+    <div style={{ width: '100vw', height: '100vh', position: 'relative' }}>
+      <SamplePage />
+    </div>
+  );
 };

@@ -1,7 +1,8 @@
+import { storiesOf } from '@storybook/react';
 import styled from 'styled-components';
 import { TransTitle, Desc, Container } from '../StoryComponent';
 import ToggleButton from './ToggleButton';
-import Button from './Button';
+import { Button } from './Button';
 import HyperButton from './HyperButton';
 
 const Box = styled.div`
@@ -12,7 +13,10 @@ const Box = styled.div`
 export default {
   title: 'atoms/Button',
   component: ToggleButton,
+  parameters: { componentSubtitle: '기본 버튼입니다' },
 };
+
+storiesOf('atoms/to/Button', module).addParameters({ component: Button });
 
 export const Sample = () => {
   return (
@@ -87,4 +91,10 @@ export const Sample = () => {
       </Container>
     </>
   );
+};
+
+Sample.parameters = {
+  docs: {
+    storyDescription: '4 sizes are supported.',
+  },
 };

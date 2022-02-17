@@ -22,9 +22,12 @@ const Flex = styled.div`
 export default {
   title: 'atoms/Icon',
   component: Icon,
+  parameters: {
+    componentSubtitle: '아이콘에 대한 설명을 입력합니다.',
+  },
 };
 
-export const Sample = () => {
+export const AllButtons = () => {
   return (
     <>
       <Title>Icons - sm</Title>

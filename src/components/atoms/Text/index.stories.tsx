@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { ftSize, ftFamily } from 'styles/theme';
 import { Title } from 'components/atoms/StoryComponent';
+import { Story, Meta } from '@storybook/react/types-6-0';
+import { Typography } from '@mui/material';
 
 type Props = {
   sz: string;
@@ -18,11 +20,25 @@ const Text = styled.div<Props>`
 export default {
   title: 'atoms/Text',
   component: Text,
-};
+  argTypes: {
+    variant: {
+      options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'body1', 'body2'],
+      control: { type: 'select' },
+    },
+    color: {
+      options: ['primary.main', 'primary.light', 'primary.dark'],
+      control: { type: 'radio' },
+    },
+  },
+} as Meta;
 
-export const Sample = () => {
+export const Sample: Story = (args) => {
   return (
     <div>
+      <Title>Args Controls</Title>
+      <Typography {...args}>
+        아래 Controls 탭에서 글자를 조정해보세요.
+      </Typography>
       <Title>Pretendard - sm</Title>
       <Text sz={ftSize.sm} ff="Pretendard" fw={100}>
         프리텐다드 100 스몰 사이즈입니다. Pretendard 100 Small Size.
@@ -173,3 +189,5 @@ export const Sample = () => {
     </div>
   );
 };
+
+export const Texts = Sample.bind({});

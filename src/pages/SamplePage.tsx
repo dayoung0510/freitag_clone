@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import HyperButton from 'components/atoms/Buttons/HyperButton';
 import FilterListIcon from '@mui/icons-material/FilterList';
@@ -39,14 +39,13 @@ type Props = {
 };
 
 const GrayContainer = styled.div`
-  height: 8rem;
+  height: 9rem;
   background-color: ${({ theme }) => theme.color.gray};
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: 300;
-  position: absolute;
-  bottom: 0;
+
   width: 100%;
 `;
 

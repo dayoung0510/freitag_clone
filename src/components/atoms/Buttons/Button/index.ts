@@ -7,7 +7,7 @@ type Props = {
   cr?: 'red' | 'cyan' | 'lime' | 'white' | 'black';
 };
 
-const Button = styled.button<Props>`
+export const Button = styled.button<Props>`
   border: none;
   padding: 0.8rem 1rem;
   cursor: pointer;
@@ -61,5 +61,3 @@ const Button = styled.button<Props>`
       font-size: ${({ theme }) => theme.ftSize.xl};
     `}
 `;
-
-export default Button;
